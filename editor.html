@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Book - Puzzle Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .editor-controls {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 10px;
+        }
+
+        .palette-item {
+            width: 40px;
+            height: 60px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.2s;
+        }
+
+        .palette-item:hover {
+            transform: scale(1.1);
+        }
+
+        .palette-item.selected {
+            border-color: #fff;
+            box-shadow: 0 0 10px #fff;
+        }
+
+        .eraser {
+            background-color: #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .status-panel {
+            color: white;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .solve-btn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            background: #4a90e2;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .solve-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+
+        .shelf-container {
+            cursor: pointer;
+        }
+
+        .shelf-container:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        #output-area {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.9);
+            color: #0f0;
+            padding: 15px;
+            border-radius: 10px;
+            font-family: monospace;
+            display: none;
+            z-index: 1000;
+        }
+
+        .close-output {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Puzzle Editor</h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <button id="back-to-game" class="nav-btn">Back to Game</button>
+                    <button id="export-btn" class="nav-btn">Export JSON</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="editor-controls">
+            <div class="color-palette" id="color-palette">
+                <!-- Colors will be added here -->
+                <div class="palette-item eraser" data-color="null" title="Eraser">✕</div>
+            </div>
+            <button id="random-btn" class="solve-btn" style="background: #27ae60;">Random Generate</button>
+            <button id="check-solvability" class="solve-btn">Check Solvability</button>
+            <div id="status-display" class="status-panel">Select a color to start placing books</div>
+        </div>
+
+        <main id="bookshelf-area">
+            <!-- Shelves will be rendered here -->
+        </main>
+    </div>
+
+    <div id="output-area">
+        <span class="close-output" onclick="this.parentElement.style.display='none'">✕</span>
+        <h3>Exported Puzzle Data</h3>
+        <pre id="json-output"></pre>
+    </div>
+
+    <script src="editor.js"></script>
+</body>
+
+</html>

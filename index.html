@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Book - Sorting Puzzle</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <header>
+            <h1 class="game-title">Red Book</h1>
+            <div id="stats-panel" class="glass-panel">
+                <div class="stat-item">
+                    <span class="label">Moves:</span>
+                    <span id="move-count" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Time:</span>
+                    <span id="timer" class="value">00:00</span>
+                </div>
+                <div class="stat-item">
+                    <button id="stats-btn" class="icon-btn" title="Statistics">📊</button>
+                    <a href="editor.html" class="nav-btn"
+                        style="text-decoration: none; font-size: 0.8rem; opacity: 0.6; margin-left: 10px;">Editor</a>
+                </div>
+            </div>
+        </header>
+
+        <main id="bookshelf-area">
+            <!-- Shelves will be injected here by JavaScript -->
+        </main>
+
+        <footer>
+            <div class="controls">
+                <button id="reset-btn" class="btn">Reset Puzzle</button>
+                <button id="how-to-play-btn" class="btn secondary">?</button>
+            </div>
+            <div class="wizard-container">
+                <img src="assets/images/wizard.webp" alt="Wizard Guide" id="wizard-img">
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <div id="win-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <h2>Puzzle Solved!</h2>
+            <p>You completed the sorting in <span id="final-time">00:00</span> with <span id="final-moves">0</span>
+                moves.</p>
+            <div class="next-puzzle-container">
+                <span class="label">Next puzzle in:</span>
+                <span id="win-countdown" class="countdown-value">00:00:00</span>
+            </div>
+            <button id="play-again-btn" class="btn">Play Again</button>
+        </div>
+    </div>
+
+    <div id="stats-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <h2>Your Statistics</h2>
+            <div class="stats-grid">
+                <div class="stats-box">
+                    <span class="stats-val" id="current-streak">0</span>
+                    <span class="stats-label">Current Streak</span>
+                </div>
+                <div class="stats-box">
+                    <span class="stats-val" id="max-streak">0</span>
+                    <span class="stats-label">Max Streak</span>
+                </div>
+            </div>
+
+            <h3>Last 7 Days</h3>
+            <div id="history-chart" class="history-chart">
+                <!-- Chart bars will be injected here -->
+            </div>
+
+            <div class="next-puzzle-container mt-20">
+                <span class="label">Next puzzle in:</span>
+                <span id="modal-countdown" class="countdown-value">00:00:00</span>
+            </div>
+
+            <button id="close-stats-btn" class="btn">Close</button>
+        </div>
+    </div>
+
+    <div id="tutorial-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Sort the books so each shelf contains only one color.</li>
+                <li>Tap a shelf to pick up the rightmost book(s).</li>
+                <li>Books of the same color move together as a <strong>volume</strong>.</li>
+                <li>You can only place books on an <strong>empty shelf</strong> or next to a book of the <strong>same
+                        color</strong>.</li>
+                <li>Each shelf can hold a maximum of <strong>7 books</strong>.</li>
+            </ul>
+            <button id="close-tutorial-btn" class="btn">Got it!</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
