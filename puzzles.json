@@ -44,178 +44,135 @@
   ],
   "2026-01-05": [
     [
+      "blue",
+      "yellow",
+      "green",
+      "green",
       "red",
-      "red",
-      "red",
-      "red",
-      "red",
-      "red"
+      "blue"
     ],
     [
-      "blue",
-      "blue",
-      "blue",
-      "blue",
+      "purple",
+      "purple",
+      "yellow",
+      "red",
       "blue",
       "blue"
     ],
     [
-      "green",
-      "green",
-      "green",
-      "green",
-      "green",
+      "yellow",
+      "red",
+      "red",
+      "red",
+      "blue",
       "green"
     ],
     [
-      "yellow",
-      "yellow",
-      "yellow",
-      "yellow",
+      "green",
+      "green",
+      "purple",
+      "purple",
+      "purple",
       "yellow"
     ],
     [
+      "blue",
       "yellow",
-      "purple",
-      "purple",
-      "purple",
-      "purple",
-      "purple",
+      "yellow",
+      "red",
+      "green",
       "purple"
     ],
     []
   ],
   "2026-01-06": [
     [
-      "blue",
-      "yellow",
-      "green",
-      "green",
-      "red",
-      "blue"
-    ],
-    [
-      "purple",
-      "purple",
-      "yellow",
       "red",
       "blue",
-      "blue"
-    ],
-    [
-      "yellow",
-      "red",
-      "red",
-      "red",
-      "blue",
-      "green"
-    ],
-    [
       "green",
-      "green",
-      "purple",
       "purple",
       "purple",
       "yellow"
     ],
     [
+      "red",
+      "green",
+      "red",
+      "blue",
+      "blue",
+      "blue"
+    ],
+    [
+      "yellow",
+      "green",
+      "red",
+      "red",
+      "purple",
+      "yellow"
+    ],
+    [
+      "blue",
       "blue",
       "yellow",
       "yellow",
-      "red",
       "green",
       "purple"
+    ],
+    [
+      "green",
+      "purple",
+      "purple",
+      "green",
+      "yellow",
+      "red"
     ],
     []
   ],
   "2026-01-07": [
     [
       "red",
-      "blue",
-      "green",
-      "purple",
-      "purple",
-      "yellow"
-    ],
-    [
       "red",
-      "green",
-      "red",
-      "blue",
-      "blue",
-      "blue"
-    ],
-    [
-      "yellow",
-      "green",
-      "red",
-      "red",
-      "purple",
-      "yellow"
-    ],
-    [
-      "blue",
       "blue",
       "yellow",
-      "yellow",
-      "green",
+      "purple",
       "purple"
     ],
     [
+      "red",
       "green",
-      "purple",
-      "purple",
       "green",
       "yellow",
+      "purple",
+      "yellow"
+    ],
+    [
+      "yellow",
+      "green",
+      "blue",
+      "blue",
+      "purple",
       "red"
+    ],
+    [
+      "blue",
+      "blue",
+      "purple",
+      "red",
+      "green",
+      "green"
+    ],
+    [
+      "green",
+      "yellow",
+      "yellow",
+      "blue",
+      "purple"
     ],
     []
   ],
   "2026-01-08": [
     [
       "red",
-      "red",
-      "blue",
-      "yellow",
-      "purple",
-      "purple"
-    ],
-    [
-      "red",
-      "green",
-      "green",
-      "yellow",
-      "purple",
-      "yellow"
-    ],
-    [
-      "yellow",
-      "green",
-      "blue",
-      "blue",
-      "purple",
-      "red"
-    ],
-    [
-      "blue",
-      "blue",
-      "purple",
-      "red",
-      "green",
-      "green"
-    ],
-    [
-      "green",
-      "yellow",
-      "yellow",
-      "blue",
-      "purple"
-    ],
-    []
-  ],
-  "2026-01-09": [
-    [
-      "red",
       "blue",
       "blue",
       "green",
@@ -256,7 +213,7 @@
     ],
     []
   ],
-  "2026-01-10": [
+  "2026-01-09": [
     [
       "purple",
       "yellow",
